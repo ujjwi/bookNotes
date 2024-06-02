@@ -1,0 +1,31 @@
+<%- include("header.ejs") %>
+
+    <section class="posting-form">
+        <form class="post-form" action="/add" method="post">
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Title</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" name="title" required>
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput2" class="form-label">ISBN number</label>
+                <input type="number" class="form-control" id="exampleFormControlInput2" name="isbn" required>
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput2" class="form-label">Rating</label>
+                <input type="number" class="form-control" id="exampleFormControlInput2" name="rating" required>
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Book Summary</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" name="summary"></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Notes from the book</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="10" name="notes"></textarea>
+            </div>
+            <div class="mb-3">
+                <button class="btn btn-info rounded-pill px-3 btn-dark" type="submit">Upload</button>
+            </div>
+        </form>
+    </section>
+
+<%- include("footer.ejs") %>

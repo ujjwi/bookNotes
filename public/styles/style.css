@@ -1,0 +1,21 @@
+.posting-form {
+    margin-top: 1%;
+}
+
+.post-form {
+    padding: 0 10%;
+}
+
+.notes-link {
+    /* text-decoration: none; */
+    color: darkslategray;
+    margin-bottom: 1rem;
+}
+
+.delit {
+    margin-top: 2%;
+}
+
+.description-heading {
+    margin-bottom: 3%;
+}

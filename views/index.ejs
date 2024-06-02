@@ -1,0 +1,47 @@
+<%- include("header.ejs") %>
+
+    <!-- listing all books on the homepage -->
+    <% for(let book of bookList){%>
+
+      <!-- div for a particular book -->
+      <div class="book container col-xxl-8 px-4 py-5">
+
+        <div id="title<%=book.id%>" class="row flex-lg-row-reverse align-items-center g-5 py-5">
+          
+          <!-- using covers openlibrary API for fetching book covers -->
+          <div class="col-10 col-sm-8 col-lg-6">
+            <img src="https://covers.openlibrary.org/b/isbn/<%=book.isbn%>-L.jpg" class="d-block mx-lg-auto img-fluid" alt="Book cover" width="700" height="500" loading="lazy">
+          </div>
+
+          <!-- displaying books contents from the object "book" -->
+          <div class="col-lg-6">
+            <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3"> <%= book.title %> </h1>
+
+            <h2 class="display-7 fw-bold text-body-emphasis lh-1 mb-3"> My ratings for the book : <%= book.rating %>/10 </h2>
+
+            <p class="lead"> <%= book.summary %> </p>
+
+            <!-- referring to another page for reading book notes in details -->
+            <strong> <a href="/book/<%= book.id %>" class="notes-link" > View my notes </a> </strong>
+
+            <!-- implementing edit and deletete buttons using a form -->
+            <div class="d-grid gap-2 d-md-flex justify-content-md-start delit">
+              <form action="/edit" method="post">
+                <button type="submit" class="btn btn-primary btn-lg px-4 me-md-2 btn-dark" fdprocessedid="o9ueh9" name="editId" value="<%= book.id %>">Edit</button>
+              </form>
+
+              <form action="/delete" method="post">
+                <button type="submit" class="btn btn-outline-secondary btn-lg px-4 btn-light" fdprocessedid="ttfeyl" name="deleteId" value="<%= book.id %>">Delete</button>
+              </form>
+            </div>
+
+          </div>
+
+        </div>
+        
+      </div>
+    
+    <% } %>
+
+
+<%- include("footer.ejs") %>

@@ -1,0 +1,31 @@
+<%- include("header.ejs") %>
+
+    <section class="posting-form">
+        <form class="post-form" action="/update/<%= book.id %>" method="post">
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Title</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" name="title"  value="<%= book.title %>" required>
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput2" class="form-label">ISBN number</label>
+                <input type="number" class="form-control" id="exampleFormControlInput2" name="isbn" value="<%= book.isbn %>" required>
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput2" class="form-label">Rating</label>
+                <input type="number" class="form-control" id="exampleFormControlInput2" name="rating" value="<%= book.rating %>" required>
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Book Summary</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" name="summary"> <%= book.summary %> </textarea>
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Notes from the book</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="10" name="notes"> <%= book.description %> </textarea>
+            </div>
+            <div class="mb-3">
+                <button class="btn btn-info rounded-pill px-3 btn-dark" type="submit">Update</button>
+            </div>
+        </form>
+    </section>
+
+<%- include("footer.ejs") %>
