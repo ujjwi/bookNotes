@@ -12,6 +12,7 @@ Book Notes is a webApp where the owner can track records of the books he has rea
 * A new entry can be posted with the book details which are name, ISBN number, rating, Book Summary and finally the Book notes. 
 * Any past entry can be edited or deleted using the Edit and Delete buttons.
 * Any past entry can be searched for using the search box at the top right corner of the website where ISBN number or title of the book should be entered.
+* Book Cover is accessed using the [Open Library Covers API](https://openlibrary.org/dev/docs/api/covers) with the help of ISBN number provided during posting a new entry.
 
 ## Technologies used
 
@@ -19,6 +20,7 @@ Book Notes is a webApp where the owner can track records of the books he has rea
 * ExpressJS
 * EJS
 * Postgre SQL
+* REST APIs
 * Bootstrap/CSS
 
 ## Getting Started
