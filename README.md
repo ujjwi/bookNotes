@@ -26,7 +26,7 @@ Book Notes is a webApp where the owner can track records of the books he has rea
 1. Clone this repository to your local machine.
 2. Navigate to the project directory in your terminal.
 3. Run `npm install` to install dependencies.
-4. Create a `.env` file similar to the `.env.example` file and fill in the required values.
+4. Create a `.env` file similar to the `env.example` file and fill in the required values.
 5. Set up your PostgreSQL database and update the `.env` file with your database credentials.
    You can create a table in your postgre database using the following command :
    ```
